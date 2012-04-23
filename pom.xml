@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.shinetech.questbot</groupId>
+    <artifactId>questbot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!-- Sonatype repositories -->
+    <repositories>
+        <repository>
+            <id>Sonatype snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+        <repository>
+            <id>Sonatype releases</id>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
+        </repository>
+    </repositories>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Atmosphere -->
+        <dependency>
+            <!-- Atmosphere's Comet Portable Runtime (CPR) -->
+            <groupId>org.atmosphere</groupId>
+            <artifactId>atmosphere-runtime</artifactId>
+            <version>0.9</version>
+        </dependency>
+        <dependency>
+            <!-- Atmosphere's Jersey module -->
+            <!-- Transitivity will pull all necessary dependencies -->
+            <!-- ie. Jersey 1.10 core, server, etc... -->
+            <groupId>org.atmosphere</groupId>
+            <artifactId>atmosphere-jersey</artifactId>
+            <version>0.9</version>
+        </dependency>
+        <dependency>
+            <!-- Atmosphere's jQuery plugin -->
+            <groupId>org.atmosphere</groupId>
+            <artifactId>atmosphere-jquery</artifactId>
+            <version>0.9</version>
+            <type>war</type>
+        </dependency>
+
+        <!-- Jersey's JSON mapper -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.10</version>
+        </dependency>
+
+        <!-- JEE API, to handle servlet level operations -->
+        <!-- ie. requests, responses, sessions, etc... -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>6.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

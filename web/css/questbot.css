@@ -1,0 +1,34 @@
+body {
+    background: url(../img/irongrip.png)
+}
+
+#content-panel {
+    background-color: white;
+    padding:10px;
+    border: 1px solid #cccccc;
+}
+
+#messages {
+    border: 1px solid #EEEEEE;
+    height: 600px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.message {
+    padding: 5px;
+    margin: 2px 2px 5px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+
+#chat-form {
+    border: 1px solid #EEEEEE;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding:5px;
+}
+
+#clear-chat-button {
+    float: right;
+}

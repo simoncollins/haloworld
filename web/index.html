@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Questbot - ask and you shall receive</title>
+        <script type="text/javascript" src="js/jquery/jquery-1.6.4.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.atmosphere.js"></script>
+        <script type="text/javascript" src="js/questbot.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <style>
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="css/questbot.css" rel="stylesheet">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Fixed, non-scrolling top navbar -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Questbot</a>
+                    <ul class="nav">
+                        <li><a href="#">Show Log</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="content-panel" class="container">
+
+            <div class="row">
+                <div id="feed" class="span7">
+
+                    <h3>Quest feed</h3>
+                    <div class="result">
+                        Stats feed!
+                    </div>
+                    <div class="result">
+                        Tweet feed!
+                    </div>
+
+                </div>
+                <div id="chat" class="span5">
+                    <a id="clear-chat-button" href="#">Clear chat</a><h3>Chat with Questbot and others online</h3>
+                    <div id="messages">
+
+                    </div>
+
+                    <form id="chat-form" class="form-inline">
+                        <input id="message-box" type="text" class="span4" placeholder="Enter your message">
+                        <button id="send-button" type="submit" class="btn">Ask away!</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

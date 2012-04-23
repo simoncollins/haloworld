@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="devdaydemo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/devdaydemo_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="devdaydemo/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="devdaydemo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="spring-3.1.0" />
+          <element id="library" level="project" name="spring-data-jpa-1.0.0" />
+          <element id="library" level="module" name="Logback" module-name="devdaydemo" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-jersey:0.9" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-annotations:0.9" />
+          <element id="library" level="project" name="Maven: asm:asm:3.1" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-core:1.10" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-servlet:1.10" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-jquery:war:0.9" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-json:1.10" />
+          <element id="library" level="project" name="Maven: org.codehaus.jettison:jettison:1.1" />
+          <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2.3-1" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.2" />
+          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.8.3" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.8.3" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.8.3" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.8.3" />
+          <element id="library" level="project" name="Maven: com.sun.jersey:jersey-server:1.10" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-runtime:0.9" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-jbossweb:0.9" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-tomcat:0.9" />
+          <element id="library" level="project" name="Maven: org.atmosphere:atmosphere-compat-tomcat7:0.9" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="devdaydemo/gwt/GWT" />
+    </root>
+  </artifact>
+</component>
