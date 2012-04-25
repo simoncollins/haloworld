@@ -28,6 +28,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Simple PubSub resource that demonstrate many functionality supported by
@@ -36,7 +37,8 @@ import javax.ws.rs.Produces;
  * @author Jeanfrancois Arcand
  */
 @Path("/pubsub/{topic}")
-@Produces("text/html;charset=ISO-8859-1")
+@Produces(MediaType.APPLICATION_JSON)
+//@Produces("text/html;charset=ISO-8859-1")
 public class HaloworldChat {
     private static final Logger logger = LoggerFactory.getLogger(HaloworldChat.class);
 
@@ -49,7 +51,7 @@ public class HaloworldChat {
      * Called when a client wants to join the chat
      */
     @GET
-    public SuspendResponse<String> joinChat() {
+    public SuspendResponse<Message> joinChat() {
         logger.info("Joining chat!!!!!");
 //        Executors.newSingleThreadExecutor().submit(new Runnable() {
 //            public void run() {
@@ -64,7 +66,7 @@ public class HaloworldChat {
 //            }
 //        });
 
-        return new SuspendResponse.SuspendResponseBuilder<String>()
+        return new SuspendResponse.SuspendResponseBuilder<Message>()
                 .broadcaster(topic)
                 .outputComments(true)
                 .addListener(new EventsLogger())
@@ -81,7 +83,8 @@ public class HaloworldChat {
 
         logger.info("postMessage: {}", message);
 
+        ChatMessage chatMessage = new ChatMessage(message);
 
-        return new Broadcastable(message, "", topic);
+        return new Broadcastable(chatMessage, "", topic);
     }
 }

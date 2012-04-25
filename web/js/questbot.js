@@ -48,14 +48,36 @@ function toggleLogButtons() {
     return false;
 }
 
+var LEVEL_TO_LABEL_MAP = {
+    "DEBUG" : "inverse",
+    "INFO" : "info",
+    "WARNING" : "warning",
+    "ERROR" : "important"
+};
+
+function logMessage(level, message) {
+    var htmlContent = '<div class="result log"><span class="label label-' + LEVEL_TO_LABEL_MAP[level] + '">' +
+        level + '</span> ' + message + '</div>';
+
+    $('#feed').append(htmlContent);
+}
+
 function handleMessage(response) {
     console.log("handle message ....");
     if (response.status == 200) {
-        detectedTransport = response.transport;
+
         var data = response.responseBody;
+
         console.log("Message received: " + data);
-        $('#messages').append("<div class='message'>" + data + "</div>");
+        var message = jQuery.parseJSON(data);
+
         // add message to the chat messages window
+        $('#messages').append("<div class='message'>" + message.messageText + "</div>");
+
+        if(message.messageType == "LOG") {
+            logMessage(message.level, message.messageText);
+        }
+
     } else {
         console.error("Error receiving message: " + response.status + " - " + response.responseBody);
     }
