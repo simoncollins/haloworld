@@ -32,3 +32,21 @@ body {
 #clear-chat-button {
     float: right;
 }
+
+.result {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.result.feed {
+    background-color: #FAFAFA;
+    border: 1px solid #F0F0F0;
+}
+
+.result.log {
+    background-color: #EEEEEE;
+    border: 1px solid #E0E0E0;
+}
+
+.result .label {
+    line-height: 16px;
+}

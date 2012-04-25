@@ -20,18 +20,19 @@
         <![endif]-->
     </head>
     <body>
-        <!-- Fixed, non-scrolling top navbar -->
+         <!--Fixed, non-scrolling top navbar -->
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="#">Questbot</a>
-                    <ul class="nav">
-                        <li><a href="#">Show Log</a></li>
-                    </ul>
-
+                    <a class="brand" href="#"><b>HAL</b>OWORLD</a>
+                    <div class="nav-collapse">
+                        <a class="btn pull-right" id="show-log-messages-btn" href="#">Show Log</a>
+                        <a class="btn btn-info pull-right" id="hide-log-messages-btn" href="#">Hide Log</a>
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <div id="content-panel" class="container">
 
@@ -39,11 +40,23 @@
                 <div id="feed" class="span7">
 
                     <h3>Quest feed</h3>
-                    <div class="result">
-                        Stats feed!
+                    <div class="result log">
+                        <span class="label label-info">INFO</span> Getting the server stats for you ...
                     </div>
-                    <div class="result">
-                        Tweet feed!
+                    <div class="result log">
+                        <span class="label label-info">INFO</span> Retrieved stats for last 30 minutes ...
+                    </div>
+                    <div class="result feed">
+                        The server is doing really well!
+                    </div>
+                    <div class="result log">
+                        <span class="label label-info">INFO</span> Getting some tweets for you ...
+                    </div>
+                    <div class="result log">
+                        <span class="label label-info">INFO</span> Found 5 relevant tweets ...
+                    </div>
+                    <div class="result feed">
+                        Tweet tweet tweet!
                     </div>
 
                 </div>

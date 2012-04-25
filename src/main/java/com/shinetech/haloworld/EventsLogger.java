@@ -14,7 +14,7 @@
  * the License.
  */
 
-package org.atmosphere.samples.pubsub;
+package com.shinetech.haloworld;
 
 import org.atmosphere.cpr.AtmosphereResourceEvent;
 import org.atmosphere.websocket.WebSocketEventListener;

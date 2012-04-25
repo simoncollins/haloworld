@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="" />
+    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/EventsLogger.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/EventsLogger.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/QuestbotChat.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/questbot.css" afterPath="$PROJECT_DIR$/web/css/questbot.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/questbot.js" afterPath="$PROJECT_DIR$/web/js/questbot.js" />
+    </list>
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,19 +69,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.html">
+      <file leaf-file-name="HaloworldChat.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="23" selection-start="2063" selection-end="2063" vertical-scroll-proportion="-14.041667">
+            <state line="74" column="31" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.6984127">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questbot.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="94" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-14.666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="questbot.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/questbot.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="144" selection-end="144" vertical-scroll-proportion="0.17045455">
+            <state line="50" column="22" selection-start="739" selection-end="757" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,7 +99,7 @@
       <file leaf-file-name="questbot.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/questbot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="190" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+            <state line="67" column="78" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,37 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_pubsub.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index_pubsub.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="67" selection-start="890" selection-end="890" vertical-scroll-proportion="29.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery.atmosphere.js" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/atmosphere/atmosphere-jquery/0.9/atmosphere-jquery-0.9.war!/jquery/jquery.atmosphere.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="104" column="16" selection-start="3492" selection-end="3492" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestbotChat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/QuestbotChat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="60" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsLogger.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/EventsLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="87" selection-start="872" selection-end="953" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,10 +145,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/JQueryPubSub.java" />
         <option value="$PROJECT_DIR$/web/index_pubsub.html" />
-        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/QuestbotChat.java" />
-        <option value="$PROJECT_DIR$/web/js/questbot.js" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/web/css/questbot.css" />
+        <option value="$PROJECT_DIR$/web/js/questbot.js" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/QuestbotChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/HaloworldChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
       </list>
     </option>
   </component>
@@ -470,10 +461,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pubsub" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -511,8 +498,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -524,6 +511,9 @@
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shinetech.demo.dashboard" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.shinetech.haloworld" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/js/jquery" />
@@ -611,6 +601,25 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local">
       <deployment />
       <server-settings>
@@ -633,22 +642,14 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -677,17 +678,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <deployment />
       <server-settings />
@@ -701,7 +691,7 @@
     </configuration>
     <configuration default="false" name="Jetty 8.1.3.v20120416" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 8.1.3.v20120416">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/devdaydemo_war_exploded" />
-      <option name="UPDATING_POLICY" value="update-resources" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="devdaydemo:war exploded">
           <settings DEPLOYMENT_METHOD="contexts" />
@@ -976,8 +966,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19764957" sideWeight="0.6615226" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33847737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19711539" sideWeight="0.6615226" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33847737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1078,23 +1068,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3791" column="2" selection-start="84966" selection-end="84966" vertical-scroll-proportion="0.3323217">
-          <folding />
-        </state>
+        <state line="3791" column="2" selection-start="84966" selection-end="84966" vertical-scroll-proportion="0.3323217" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/atmosphere/atmosphere-jquery/0.9/atmosphere-jquery-0.9.war!/jquery/jquery.atmosphere.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="16" selection-start="3492" selection-end="3492" vertical-scroll-proportion="0.0">
+        <state line="104" column="16" selection-start="3492" selection-end="3492" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index_pubsub.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="67" selection-start="890" selection-end="890" vertical-scroll-proportion="0.025337838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery/jquery.atmosphere.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="39" selection-start="1833" selection-end="1833" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/EventsLogger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="87" selection-start="872" selection-end="953" vertical-scroll-proportion="0.024350649">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="432" selection-end="432" vertical-scroll-proportion="0.10714286">
-          <folding />
-        </state>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
@@ -1102,55 +1105,36 @@
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery/jquery.atmosphere.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="39" selection-start="1833" selection-end="1833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/EventsLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="87" selection-start="872" selection-end="953" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/atmosphere/samples/pubsub/QuestbotChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="60" selection-start="2098" selection-end="2098" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_pubsub.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="890" selection-end="890" vertical-scroll-proportion="29.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/questbot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="190" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+        <state line="39" column="190" selection-start="1661" selection-end="1661" vertical-scroll-proportion="-26.59091">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="23" selection-start="2063" selection-end="2063" vertical-scroll-proportion="-14.041667">
+        <state line="55" column="94" selection-start="2541" selection-end="2541" vertical-scroll-proportion="-14.666667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/questbot.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="144" selection-end="144" vertical-scroll-proportion="0.17045455">
+        <state line="50" column="22" selection-start="739" selection-end="757" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/questbot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="78" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="31" selection-start="2378" selection-end="2378" vertical-scroll-proportion="0.6984127">
           <folding />
         </state>
       </provider>

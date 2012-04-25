@@ -12,6 +12,11 @@ function setup() {
 
     $('#clear-chat-button').click(clearChat);
 
+    $('#show-log-messages-btn').click(toggleLogButtons);
+    $('#hide-log-messages-btn').click(toggleLogButtons);
+
+    $('#show-log-messages-btn').hide();
+
     connectToServer();
 }
 
@@ -33,6 +38,13 @@ function sendMessage() {
 function clearChat() {
     $('#messages').empty();
     $('#message-box').focus();
+    return false;
+}
+
+function toggleLogButtons() {
+    $('#hide-log-messages-btn').toggle();
+    $('#show-log-messages-btn').toggle();
+    $('#feed .log').fadeToggle('fast', 'linear');
     return false;
 }
 

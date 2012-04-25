@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.atmosphere.samples.pubsub;
+package com.shinetech.haloworld;
 
 import org.atmosphere.annotation.Broadcast;
 import org.atmosphere.cpr.Broadcaster;
@@ -37,8 +37,8 @@ import javax.ws.rs.Produces;
  */
 @Path("/pubsub/{topic}")
 @Produces("text/html;charset=ISO-8859-1")
-public class QuestbotChat {
-    private static final Logger logger = LoggerFactory.getLogger(QuestbotChat.class);
+public class HaloworldChat {
+    private static final Logger logger = LoggerFactory.getLogger(HaloworldChat.class);
 
 
     private
@@ -50,6 +50,19 @@ public class QuestbotChat {
      */
     @GET
     public SuspendResponse<String> joinChat() {
+        logger.info("Joining chat!!!!!");
+//        Executors.newSingleThreadExecutor().submit(new Runnable() {
+//            public void run() {
+//                while (true) {
+//                    try {
+//                        Thread.sleep(5000);
+//                    } catch (InterruptedException e) {
+//                    }
+//                    logger.info("Broadcasting a ping!");
+//                    topic.broadcast("The server is pinging you at " + new Date().toString());
+//                }
+//            }
+//        });
 
         return new SuspendResponse.SuspendResponseBuilder<String>()
                 .broadcaster(topic)
@@ -67,6 +80,7 @@ public class QuestbotChat {
     public Broadcastable postMessage(@FormParam("message") String message) {
 
         logger.info("postMessage: {}", message);
+
 
         return new Broadcastable(message, "", topic);
     }
