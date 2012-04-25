@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ChatMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/LogLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/LogMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Message.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/MessageType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/haloworld.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/haloworld.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/questbot.css" afterPath="$PROJECT_DIR$/web/css/haloworld.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/questbot.js" afterPath="$PROJECT_DIR$/web/js/haloworld.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/questbot.js" afterPath="$PROJECT_DIR$/web/js/questbot.js" />
     </list>
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,17 +97,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questbot.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/questbot.css">
+      <file leaf-file-name="haloworld.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/haloworld.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="22" selection-start="739" selection-end="757" vertical-scroll-proportion="0.9512987">
+            <state line="21" column="31" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questbot.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/questbot.js">
+      <file leaf-file-name="haloworld.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/haloworld.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="59" column="39" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.0">
               <folding />
@@ -129,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="492" selection-end="492" vertical-scroll-proportion="-5.625">
+            <state line="26" column="46" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.6587838">
               <folding />
             </state>
           </provider>
@@ -165,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ChatMessage.java" />
         <option value="$PROJECT_DIR$/web/js/questbot.js" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
       </list>
     </option>
   </component>
@@ -662,6 +657,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -712,7 +718,7 @@
     <configuration default="false" name="Jetty 8 - Haloworld" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 8.1.3.v20120416">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/devdaydemo_war_exploded" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="update-resources" />
       <deployment>
         <artifact name="devdaydemo:war exploded">
           <settings DEPLOYMENT_METHOD="contexts" />
@@ -997,6 +1003,7 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1011,7 +1018,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33847737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1172,16 +1178,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/questbot.js">
+    <entry file="file://$PROJECT_DIR$/web/js/haloworld.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="39" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="492" selection-end="492" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
@@ -1195,9 +1194,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/questbot.css">
+    <entry file="file://$PROJECT_DIR$/web/css/haloworld.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="22" selection-start="739" selection-end="757" vertical-scroll-proportion="0.9512987">
+        <state line="21" column="31" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="46" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.6587838">
           <folding />
         </state>
       </provider>
