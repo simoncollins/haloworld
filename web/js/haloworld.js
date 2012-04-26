@@ -55,27 +55,36 @@ var LEVEL_TO_LABEL_MAP = {
     "ERROR" : "important"
 };
 
-function logMessage(level, message) {
-    var htmlContent = '<div class="result log"><span class="label label-' + LEVEL_TO_LABEL_MAP[level] + '">' +
-        level + '</span> ' + message + '</div>';
+function addLogMessage(message) {
+    var htmlContent = '<div class="result log"><span class="label label-' + LEVEL_TO_LABEL_MAP[message.level] + '">' +
+        message.level + '</span> ' + message.messageText + '</div>';
 
     $('#feed').append(htmlContent);
 }
 
+function addChatMessage(message) {
+    $('#messages').append("<div class='message'>" + message.messageText + "</div>");
+}
+
+function addFeedMessage(message) {
+    // TODO
+}
+
 function handleMessage(response) {
-    console.log("handle message ....");
     if (response.status == 200) {
 
         var data = response.responseBody;
-
-        console.log("Message received: " + data);
         var message = jQuery.parseJSON(data);
 
-        // add message to the chat messages window
-        $('#messages').append("<div class='message'>" + message.messageText + "</div>");
-
-        if(message.messageType == "LOG") {
-            logMessage(message.level, message.messageText);
+        switch(message.messageType) {
+            case "LOG" :
+                addLogMessage(message);
+                break;
+            case "CHAT" :
+                addChatMessage(message);
+                break;
+            case "FEED" :
+                addFeedMessage(message);
         }
 
     } else {
