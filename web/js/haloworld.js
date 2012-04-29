@@ -3,7 +3,7 @@ $(document).ready(setup);
 var socket = $.atmosphere;
 var subSocket;
 var showLogs = true;
-var memberName = "bob";
+var memberName;
 
 function setup() {
     // disable autocomplete on the message box
@@ -19,7 +19,22 @@ function setup() {
 
     $('#show-log-messages-btn').hide();
 
-    connectToServer();
+    $('#join-btn').click(handleLogin);
+
+    $('#loginModal').modal({
+        keyboard: false,
+        backdrop: 'static'
+    });
+
+}
+
+function handleLogin() {
+    memberName = $('#login-name').val();
+    if(memberName != null && memberName.length > 0) {
+        $('#loginModal').modal('hide');
+        connectToServer();
+    }
+    return false;
 }
 
 function sendMessage() {
@@ -71,8 +86,18 @@ function addChatMessage(message) {
     $('#messages').append("<div class='message'><b>" + message.sender.name + ": </b>" + message.messageText + "</div>");
 }
 
-function addFeedMessage(message) {
-    // TODO
+function addFeedResult(message) {
+    // create the feed container that the widget will render the result into
+    var htmlContent = "<div id='" + message.resultId + "' class='result feed'></div>"
+    $('#feed').append(htmlContent);
+
+    // create the result within the container
+    FeedResultManager.createResult(message.resultType, message.resultId, message.data);
+}
+
+function updateFeedResult(feedResultId, updateData) {
+
+
 }
 
 function handleMessage(response) {
@@ -88,8 +113,12 @@ function handleMessage(response) {
             case "CHAT" :
                 addChatMessage(message);
                 break;
-            case "FEED" :
-                addFeedMessage(message);
+            case "FEED_RESULT" :
+                addFeedResult(message);
+                break;
+            case "FEED_RESULT_UPDATE" :
+                updateFeedResult(message.feedResultId, message.data);
+                break;
         }
 
     } else {
@@ -115,3 +144,37 @@ function connectToServer() {
 
     console.log("Connected to server");
 }
+
+var FeedResultManager = {
+
+    resultWidgetConstructors: {},
+
+    resultWidgets: {},
+
+    registerWidgetConstructor: function(resultType, widgetConstructorFunction) {
+        FeedResultManager.resultWidgetConstructors[resultType] = widgetConstructorFunction;
+    },
+
+    createResult: function(resultType, resultId, resultData) {
+        var construct = FeedResultManager.resultWidgetConstructors[resultType];
+        if(construct != null) {
+
+            // create the widget that will render the result and tell it to render the initial result
+            // store a reference to it so that we can feed it updates if/when they arrive.
+            var resultWidget = construct(resultId);
+            FeedResultManager.resultWidgets[resultId] = resultWidget;
+            resultWidget.createWithData(resultData);
+        } else {
+            console.error("Could not create result of type '" + resultType + "' because no constructor function was found");
+        }
+    },
+
+    updateResult: function(resultId, resultData) {
+        var resultWidget = FeedResultManager.resultWidgets[resultId];
+        if(resultWidget != null) {
+            resultWidget.updateWithData(resultData);
+        } else {
+            console.error("Could not update widget with result ID '" + resultId + "' because it does not exist");
+        }
+    }
+};

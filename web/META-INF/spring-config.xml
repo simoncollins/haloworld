@@ -9,9 +9,18 @@
 
     <bean id="atmosphereMessageChannel" class="com.shinetech.haloworld.chat.AtmosphereMessageChannel"/>
 
-    <bean id="HAL" class="com.shinetech.haloworld.hal.HAL"/>
+    <bean id="HAL" class="com.shinetech.haloworld.hal.HAL">
+        <constructor-arg index="0">
+            <list>
+                <ref bean="currentTimeQuestionSolver"/>
+            </list>
+        </constructor-arg>
+    </bean>
 
     <bean id="chatManager" class="com.shinetech.haloworld.chat.ChatManager">
         <constructor-arg index="0" ref="HAL"/>
     </bean>
+
+    <!-- question solvers -->
+    <bean id="currentTimeQuestionSolver" class="com.shinetech.haloworld.hal.CurrentTimeQuestionSolver"/>
 </beans>

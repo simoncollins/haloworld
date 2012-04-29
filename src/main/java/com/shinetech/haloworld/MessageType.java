@@ -6,8 +6,9 @@ package com.shinetech.haloworld;
 public enum MessageType {
 
     LOG,
-    FEED,
+    FEED_RESULT,
+    FEED_RESULT_UPDATE,
     CHAT,
-    MEMBERJOINED
+    MEMBER_JOINED
 
 }
