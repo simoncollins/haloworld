@@ -1,5 +1,7 @@
 package com.shinetech.haloworld;
 
+import com.shinetech.haloworld.chat.ChatMember;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import static com.shinetech.haloworld.MessageType.*;
 
@@ -8,6 +10,8 @@ import static com.shinetech.haloworld.MessageType.*;
  */
 @XmlRootElement
 public class Message {
+
+    public ChatMember sender;
 
     public MessageType messageType;
 

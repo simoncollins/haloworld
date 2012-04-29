@@ -2,6 +2,8 @@ $(document).ready(setup);
 
 var socket = $.atmosphere;
 var subSocket;
+var showLogs = true;
+var memberName = "bob";
 
 function setup() {
     // disable autocomplete on the message box
@@ -29,7 +31,7 @@ function sendMessage() {
         console.log("Sending message: " + message);
 
         subSocket.push({
-            data: 'message=' + message
+            data: 'message=' + message + '&memberName=' + memberName
         });
     }
     return false;
@@ -45,6 +47,7 @@ function toggleLogButtons() {
     $('#hide-log-messages-btn').toggle();
     $('#show-log-messages-btn').toggle();
     $('#feed .log').fadeToggle('fast', 'linear');
+    showLogs = !showLogs;
     return false;
 }
 
@@ -56,14 +59,16 @@ var LEVEL_TO_LABEL_MAP = {
 };
 
 function addLogMessage(message) {
-    var htmlContent = '<div class="result log"><span class="label label-' + LEVEL_TO_LABEL_MAP[message.level] + '">' +
+    var display = showLogs ? 'block' : 'none';
+
+    var htmlContent = '<div class="result log" style="display:' + display + '"><span class="label label-' + LEVEL_TO_LABEL_MAP[message.level] + '">' +
         message.level + '</span> ' + message.messageText + '</div>';
 
     $('#feed').append(htmlContent);
 }
 
 function addChatMessage(message) {
-    $('#messages').append("<div class='message'>" + message.messageText + "</div>");
+    $('#messages').append("<div class='message'><b>" + message.sender.name + ": </b>" + message.messageText + "</div>");
 }
 
 function addFeedMessage(message) {
@@ -95,7 +100,7 @@ function handleMessage(response) {
 function connectToServer() {
 
     // connection details
-    var configUrl = document.location.toString() + 'atm/pubsub/chat';
+    var configUrl = document.location.toString() + 'atm/pubsub/chat?memberName=' + memberName;
     console.log("Connecting to URL: " + configUrl);
 
     var config = {

@@ -7,6 +7,7 @@ public enum MessageType {
 
     LOG,
     FEED,
-    CHAT
+    CHAT,
+    MEMBERJOINED
 
 }

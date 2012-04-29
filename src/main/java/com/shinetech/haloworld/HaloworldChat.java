@@ -15,44 +15,56 @@
  */
 package com.shinetech.haloworld;
 
+import com.shinetech.haloworld.chat.AtmosphereMessageChannel;
+import com.shinetech.haloworld.chat.ChatManager;
+import com.shinetech.haloworld.chat.ChatMember;
+import com.shinetech.haloworld.chat.MessageChannel;
+import com.sun.jersey.api.core.InjectParam;
 import org.atmosphere.annotation.Broadcast;
 import org.atmosphere.cpr.Broadcaster;
+import org.atmosphere.cpr.BroadcasterFactory;
 import org.atmosphere.jersey.Broadcastable;
+import org.atmosphere.jersey.JerseyBroadcaster;
 import org.atmosphere.jersey.SuspendResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
-import javax.ws.rs.FormParam;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
- * Simple PubSub resource that demonstrate many functionality supported by
- * Atmosphere JQuery Plugin and Atmosphere Jersey extension.
- *
- * @author Jeanfrancois Arcand
+ * Main service end point for our chat application.
  */
-@Path("/pubsub/{topic}")
+@Path("/pubsub/chat")
 @Produces(MediaType.APPLICATION_JSON)
-//@Produces("text/html;charset=ISO-8859-1")
+@Component
+@Scope("singleton")
 public class HaloworldChat {
     private static final Logger logger = LoggerFactory.getLogger(HaloworldChat.class);
 
+    @InjectParam
+    AtmosphereMessageChannel messageChannel;
 
-    private
-    @PathParam("topic")
-    Broadcaster topic;
+    @InjectParam
+    ChatManager chatManager;
+
+
+//    private Broadcaster getBroadcaster() {
+//        if(chatBroadcaster == null) {
+//            BroadcasterFactory factory = BroadcasterFactory.getDefault();
+//            chatBroadcaster = factory.get(JerseyBroadcaster.class, "chat");
+//        }
+//        return chatBroadcaster;
+//    }
 
     /**
      * Called when a client wants to join the chat
      */
     @GET
-    public SuspendResponse<Message> joinChat() {
-        logger.info("Joining chat!!!!!");
+    public SuspendResponse<Message> connect(@QueryParam("memberName") String memberName) {
+        logger.info(memberName + " is joining the chat ....");
 //        Executors.newSingleThreadExecutor().submit(new Runnable() {
 //            public void run() {
 //                while (true) {
@@ -61,13 +73,17 @@ public class HaloworldChat {
 //                    } catch (InterruptedException e) {
 //                    }
 //                    logger.info("Broadcasting a ping!");
-//                    topic.broadcast("The server is pinging you at " + new Date().toString());
+//                    getBroadcaster().broadcast("The server is pinging you at " + new Date().toString());
 //                }
 //            }
 //        });
 
+        ChatMember member = new ChatMember(memberName);
+
+        chatManager.addChatMember(member, messageChannel);
+
         return new SuspendResponse.SuspendResponseBuilder<Message>()
-                .broadcaster(topic)
+                .broadcaster(messageChannel.getBroadcaster())
                 .outputComments(true)
                 .addListener(new EventsLogger())
                 .build();
@@ -78,13 +94,20 @@ public class HaloworldChat {
      * who have joined the chat.
      */
     @POST
-    @Broadcast()
-    public Broadcastable postMessage(@FormParam("message") String message) {
+//    @Broadcast()
+    public void postMessage(@FormParam("message") String message,@FormParam("memberName") String memberName) {
+//    public Broadcastable postMessage(@FormParam("message") String message) {
 
         logger.info("postMessage: {}", message);
 
-        ChatMessage chatMessage = new ChatMessage(message);
+        ChatMember member = chatManager.lookupMember(memberName);
 
-        return new Broadcastable(chatMessage, "", topic);
+        ChatMessage chatMessage = new ChatMessage(member, message);
+
+        chatManager.postMessage(chatMessage);
+
+//        LogMessage logMessage = new LogMessage(LogLevel.INFO, "message received and sent to chat manager");
+
+//        return new Broadcastable(logMessage, "", messageChannel.getBroadcaster());
     }
 }

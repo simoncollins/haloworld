@@ -3,19 +3,23 @@
          xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee    http://java.sun.com/xml/ns/j2ee/web-app_2.5.xsd">
-    <description>Questbot</description>
-    <display-name>Questbot</display-name>
+    <description>Haloworld</description>
+    <display-name>Haloworld</display-name>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>META-INF/spring-config.xml</param-value>
+    </context-param>
+
+
     <servlet>
         <description>AtmosphereServlet</description>
         <servlet-name>AtmosphereServlet</servlet-name>
         <servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
-        <!-- WebSocket time out
-        <init-param>
-            <param-name>org.atmosphere.websocket.maxIdleTime</param-name>
-            <param-value>10000</param-value>
-        </init-param>
-        -->
-        <!-- For mvn jetty:run -->
+
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
             <param-value>com.shinetech.haloworld</param-value>
@@ -29,8 +33,9 @@
             <param-value>org.atmosphere.client.JSONPTransportFilter</param-value>
         </init-param>
 
-        <load-on-startup>0</load-on-startup>
+        <load-on-startup>1</load-on-startup>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>AtmosphereServlet</servlet-name>
         <url-pattern>/atm/*</url-pattern>
