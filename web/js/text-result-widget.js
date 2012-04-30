@@ -15,6 +15,7 @@ TextResultWidget.prototype.createWithData = function(data) {
 };
 
 TextResultWidget.prototype.updateWithData = function(data) {
+    console.log("Updating result with data: " + data)
     $('#' + this.resultId).text(data.text);
 };
 

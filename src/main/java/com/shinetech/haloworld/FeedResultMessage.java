@@ -12,7 +12,7 @@ import static com.shinetech.haloworld.MessageType.*;
  * Message with feed information
  */
 @XmlRootElement
-@XmlSeeAlso(TextData.class)
+@XmlSeeAlso({TextData.class, ServerStatsData.class})
 public class FeedResultMessage extends Message {
 
     public Data data;

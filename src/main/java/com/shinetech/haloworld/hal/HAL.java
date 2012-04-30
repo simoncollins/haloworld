@@ -7,6 +7,8 @@ import com.shinetech.haloworld.chat.ChatMember;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static com.shinetech.haloworld.MessageType.CHAT;
 import static com.shinetech.haloworld.MessageType.MEMBER_JOINED;
@@ -21,6 +23,7 @@ public class HAL {
     private static final String HANDLE = "@" + NAME.toLowerCase();
 
     private List<QuestionSolver> questionSolvers = new ArrayList<QuestionSolver>();
+    private ExecutorService executorService;
 
     public HAL() { }
 
@@ -34,6 +37,7 @@ public class HAL {
 
     public void initWithContext(ChatContext context) {
         this.context = context;
+        this.executorService = Executors.newSingleThreadExecutor();
     }
 
     public void handleMessage(Message message) {
@@ -86,7 +90,8 @@ public class HAL {
 
         @Override
         public void publishUpdate(String resultId, Answer answer) {
-
+            FeedResultUpdateMessage message = new FeedResultUpdateMessage(resultId, answer.resultType, "", answer.data);
+            context.sendMessage(message);
         }
 
         @Override
@@ -96,7 +101,28 @@ public class HAL {
 
         @Override
         public void log(String resultId, String message) {
-            context.sendMessage(new LogMessage(LogLevel.INFO, message));
+            context.sendMessage(new LogMessage(LogLevel.INFO, "Result " + resultId + ": " + message));
+        }
+
+        @Override
+        public void executeJob(Runnable job) {
+            executorService.submit(job);
+        }
+
+        @Override
+        public void executeJobRepeatedly(final int interval, final Runnable job) {
+            executorService.submit(new Runnable() {
+                @Override
+                public void run() {
+                    while(true) {
+                        try {
+                            job.run();
+                            Thread.sleep(interval);
+                        } catch (InterruptedException e) {
+                        }
+                    }
+                }
+            });
         }
     };
 

@@ -15,6 +15,7 @@ public class Answer {
     }
 
     public static enum TYPE {
-        SIMPLE_TEXT_RESULT
+        SIMPLE_TEXT_RESULT,
+        SERVER_STATS_RESULT
     }
 }

@@ -1,8 +1,13 @@
-package com.shinetech.haloworld.hal;
+package com.shinetech.haloworld.hal.solver;
 
 import com.shinetech.haloworld.TextData;
+import com.shinetech.haloworld.hal.Answer;
+import com.shinetech.haloworld.hal.AnswerContext;
+import com.shinetech.haloworld.hal.QuestionSolver;
 
 import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static com.shinetech.haloworld.hal.Answer.TYPE.SIMPLE_TEXT_RESULT;
 
@@ -10,6 +15,7 @@ import static com.shinetech.haloworld.hal.Answer.TYPE.SIMPLE_TEXT_RESULT;
  * Answers the question "What is the current time" or "what is the time"
  */
 public class CurrentTimeQuestionSolver implements QuestionSolver {
+
     String[] questions = new String[] {
             "what time is it",
             "what is the time",
@@ -33,4 +39,5 @@ public class CurrentTimeQuestionSolver implements QuestionSolver {
         }
         return false;
     }
+
 }

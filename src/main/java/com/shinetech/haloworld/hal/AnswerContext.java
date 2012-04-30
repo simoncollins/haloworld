@@ -1,5 +1,7 @@
 package com.shinetech.haloworld.hal;
 
+import java.util.concurrent.ExecutorService;
+
 /**
  * Context that a QuestionSolver can use to publish answers to questions and updates to those answers
  */
@@ -17,4 +19,7 @@ public interface AnswerContext {
     public void couldNotAnswerQuestion(String resultId, String reason);
 
     public void log(String resultId, String message);
+
+    public void executeJob(Runnable job);
+    public void executeJobRepeatedly(int interval, Runnable job);
 }

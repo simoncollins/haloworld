@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultUpdateMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/TextData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/CurrentTimeQuestionSolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/QuestionSolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/text-result-widget.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index_pubsub.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ServerStatsData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/server-stats-widget.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/CurrentTimeQuestionSolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/CurrentTimeQuestionSolver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/MemberJoinedMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/MemberJoinedMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/MessageType.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/MessageType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/META-INF/spring-config.xml" afterPath="$PROJECT_DIR$/web/META-INF/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/haloworld.css" afterPath="$PROJECT_DIR$/web/css/haloworld.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/haloworld.js" afterPath="$PROJECT_DIR$/web/js/haloworld.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/text-result-widget.js" afterPath="$PROJECT_DIR$/web/js/text-result-widget.js" />
     </list>
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,8 +98,57 @@
       <file leaf-file-name="haloworld.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/haloworld.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="44" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.0">
+            <state line="157" column="0" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerStatsData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ServerStatsData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server-stats-widget.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/server-stats-widget.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="32" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WolframRunner.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="110" selection-start="659" selection-end="659" vertical-scroll-proportion="0.5575221">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="82" selection-start="430" selection-end="430" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/TextData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="239" selection-end="269" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,54 +156,20 @@
       <file leaf-file-name="HAL.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="54" selection-start="3216" selection-end="3216" vertical-scroll-proportion="0.0">
+            <state line="92" column="12" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#639#655#0" expanded="true" />
+                <element signature="e#723#739#0" expanded="true" />
+                <element signature="e#3947#4319#0" expanded="true" />
+                <element signature="e#4304#4305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.html">
+      <file leaf-file-name="Answer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="46" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.2339374">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnswerContext.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="52" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Data.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="20" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/chat/ChatManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AtmosphereMessageChannel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/chat/AtmosphereMessageChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="26" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+            <state line="17" column="31" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,17 +178,21 @@
       <file leaf-file-name="FeedResultMessage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+            <state line="13" column="30" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text-result-widget.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/text-result-widget.js">
+      <file leaf-file-name="ServerStatsQuestionSolver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="47" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="56" column="23" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2734#3089#0" expanded="true" />
+                <element signature="e#3078#3079#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -194,22 +210,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/feed/Answer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AbstractQuestionSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/QuestionSolver.java" />
-        <option value="$PROJECT_DIR$/web/META-INF/spring-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/CurrentTimeQuestionSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/TextData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultUpdateMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" />
-        <option value="$PROJECT_DIR$/web/js/text-result-widget.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" />
         <option value="$PROJECT_DIR$/web/css/haloworld.css" />
-        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/META-INF/spring-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/CurrentTimeQuestionSolver.java" />
+        <option value="$PROJECT_DIR$/web/js/text-result-widget.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" />
         <option value="$PROJECT_DIR$/web/js/haloworld.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ServerStatsData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/js/server-stats-widget.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java" />
       </list>
     </option>
   </component>
@@ -316,8 +332,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1920" />
-    <option name="height" value="1093" />
+    <option name="width" value="1727" />
+    <option name="height" value="1049" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -455,28 +471,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jquery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Haloworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="haloworld" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -551,7 +545,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="hal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="haloworld" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -604,6 +662,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -618,13 +677,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/web/js" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/js/jquery" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -634,6 +694,8 @@
       <recent name="com.shinetech.demo.dashboard" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.shinetech.haloworld.util" />
+      <recent name="com.shinetech.haloworld.hal.solver" />
       <recent name="com.shinetech.haloworld.hal" />
       <recent name="com.shinetech.haloworld" />
     </key>
@@ -643,7 +705,29 @@
       <recent name="$PROJECT_DIR$/web/WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Jetty Server.Jetty 8 - Haloworld">
+  <component name="RunManager" selected="Application.WolframRunner">
+    <configuration default="false" name="WolframRunner" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.shinetech.haloworld.util.WolframRunner" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="haloworld" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
@@ -1066,10 +1150,11 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Jetty Server.Jetty 8 - Haloworld" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 6" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7" />
+      <item index="3" class="java.lang.String" itemvalue="Application.WolframRunner" />
     </list>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -1105,7 +1190,7 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1093" extended-state="6" />
+    <frame x="0" y="22" width="1727" height="1049" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937062" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1198,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39917696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39870688" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1122,8 +1207,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19497864" sideWeight="0.67695475" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32304525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2173913" sideWeight="0.6616379" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33836207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1191,125 +1276,134 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Message.java">
+    <entry file="file://$PROJECT_DIR$/web/META-INF/spring-config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+        <state line="14" column="31" selection-start="801" selection-end="801" vertical-scroll-proportion="-9.545455">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="63" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/CurrentTimeQuestionSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/CurrentTimeQuestionSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="60" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+        <state line="29" column="38" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/TextData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultUpdateMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="88" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/chat/ChatManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="2094" selection-end="2094" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/chat/AtmosphereMessageChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+        <state line="44" column="65" selection-start="1557" selection-end="1618" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/text-result-widget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+        <state line="17" column="52" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery/jquery-1.7.2.min.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultUpdateMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="10" column="52" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0">
+        <state line="13" column="30" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/haloworld.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/TextData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="1" selection-start="888" selection-end="888" vertical-scroll-proportion="0.9507389">
+        <state line="8" column="0" selection-start="239" selection-end="269" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="31" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="54" selection-start="3216" selection-end="3216" vertical-scroll-proportion="0.0">
+        <state line="92" column="12" selection-start="3142" selection-end="3142" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#639#655#0" expanded="true" />
+            <element signature="e#723#739#0" expanded="true" />
+            <element signature="e#3947#4319#0" expanded="true" />
+            <element signature="e#4304#4305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ServerStatsData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="23" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2734#3089#0" expanded="true" />
+            <element signature="e#3078#3079#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/haloworld.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="44" selection-start="3439" selection-end="3439" vertical-scroll-proportion="0.0">
+        <state line="157" column="0" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/server-stats-widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="46" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.2339374">
+        <state line="8" column="82" selection-start="430" selection-end="430" vertical-scroll-proportion="-5.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="110" selection-start="659" selection-end="659" vertical-scroll-proportion="0.5575221">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

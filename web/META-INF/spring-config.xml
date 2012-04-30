@@ -13,6 +13,7 @@
         <constructor-arg index="0">
             <list>
                 <ref bean="currentTimeQuestionSolver"/>
+                <ref bean="serverStatsQuestionSolver"/>
             </list>
         </constructor-arg>
     </bean>
@@ -22,5 +23,6 @@
     </bean>
 
     <!-- question solvers -->
-    <bean id="currentTimeQuestionSolver" class="com.shinetech.haloworld.hal.CurrentTimeQuestionSolver"/>
+    <bean id="currentTimeQuestionSolver" class="com.shinetech.haloworld.hal.solver.CurrentTimeQuestionSolver"/>
+    <bean id="serverStatsQuestionSolver" class="com.shinetech.haloworld.hal.solver.ServerStatsQuestionSolver"/>
 </beans>

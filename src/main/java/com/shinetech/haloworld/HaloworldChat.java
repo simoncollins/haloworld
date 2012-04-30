@@ -50,33 +50,12 @@ public class HaloworldChat {
     @InjectParam
     ChatManager chatManager;
 
-
-//    private Broadcaster getBroadcaster() {
-//        if(chatBroadcaster == null) {
-//            BroadcasterFactory factory = BroadcasterFactory.getDefault();
-//            chatBroadcaster = factory.get(JerseyBroadcaster.class, "chat");
-//        }
-//        return chatBroadcaster;
-//    }
-
     /**
      * Called when a client wants to join the chat
      */
     @GET
     public SuspendResponse<Message> connect(@QueryParam("memberName") String memberName) {
         logger.info(memberName + " is joining the chat ....");
-//        Executors.newSingleThreadExecutor().submit(new Runnable() {
-//            public void run() {
-//                while (true) {
-//                    try {
-//                        Thread.sleep(5000);
-//                    } catch (InterruptedException e) {
-//                    }
-//                    logger.info("Broadcasting a ping!");
-//                    getBroadcaster().broadcast("The server is pinging you at " + new Date().toString());
-//                }
-//            }
-//        });
 
         ChatMember member = new ChatMember(memberName);
 

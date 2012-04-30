@@ -96,8 +96,7 @@ function addFeedResult(message) {
 }
 
 function updateFeedResult(feedResultId, updateData) {
-
-
+    FeedResultManager.updateResult(feedResultId, updateData);
 }
 
 function handleMessage(response) {
@@ -117,7 +116,7 @@ function handleMessage(response) {
                 addFeedResult(message);
                 break;
             case "FEED_RESULT_UPDATE" :
-                updateFeedResult(message.feedResultId, message.data);
+                updateFeedResult(message.resultId, message.data);
                 break;
         }
 
