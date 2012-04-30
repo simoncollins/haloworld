@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/ServerStatsData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/server-stats-widget.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/CurrentTimeQuestionSolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/CurrentTimeQuestionSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/FeedResultMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/HaloworldChat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/Answer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/META-INF/spring-config.xml" afterPath="$PROJECT_DIR$/web/META-INF/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/haloworld.js" afterPath="$PROJECT_DIR$/web/js/haloworld.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/text-result-widget.js" afterPath="$PROJECT_DIR$/web/js/text-result-widget.js" />
-    </list>
+    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="" />
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
