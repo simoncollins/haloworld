@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/WolframAlphaSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/AnswerContext.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/HAL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/hal/solver/ServerStatsQuestionSolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java" afterPath="$PROJECT_DIR$/src/main/java/com/shinetech/haloworld/util/WolframRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/META-INF/spring-config.xml" afterPath="$PROJECT_DIR$/web/META-INF/spring-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/haloworld.js" afterPath="$PROJECT_DIR$/web/js/haloworld.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/server-stats-widget.js" afterPath="$PROJECT_DIR$/web/js/server-stats-widget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/text-result-widget.js" afterPath="$PROJECT_DIR$/web/js/text-result-widget.js" />
-    </list>
+    <list default="true" id="dafdb83c-ccf8-426e-ba1d-0cc7acdfd79e" name="Default" comment="" />
     <ignored path="Dashboard.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1209,7 +1197,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2173913" sideWeight="0.6616379" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33836207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33836207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
