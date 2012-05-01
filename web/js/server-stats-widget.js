@@ -2,6 +2,8 @@
 
 function ServerStatsWidget(resultId) {
     this.resultId = resultId;
+    this.currentValues = []; // current heap usage percentage
+    this.graphContainer = null;
 }
 
 ServerStatsWidget.constuctWidget = function(resultId) {
@@ -11,19 +13,85 @@ ServerStatsWidget.constuctWidget = function(resultId) {
 
 ServerStatsWidget.prototype.createWithData = function(data) {
     console.log("Creating result with data: " + data);
-    var currentInfo = this.createCurrentInfo(data);
-    $('#' + this.resultId).text(currentInfo);
+
+    // create DIV for text status
+    var htmlContent = "<div id='feed-" + this.resultId + "-text'></div>";
+    $('#feed-' + this.resultId).html(htmlContent);
+
+    // append SVG container for graph
+    this.createGraphContainer(this.resultId);
+
+    // set text info
+    var currentInfo = this.createTextInfo(data);
+    $('#feed-' + this.resultId + "-text").text(currentInfo);
+
+    // set initial graph value
+    this.currentValues.push(data.heapPercentageUsage);
+    this.updateGraph();
 };
 
 ServerStatsWidget.prototype.updateWithData = function(data) {
     console.log("Updating result with data: " + data);
-    var currentInfo = this.createCurrentInfo(data);
-    $('#' + this.resultId).text(currentInfo);
+    var currentInfo = this.createTextInfo(data);
+    $('#feed-' + this.resultId + "-text").text(currentInfo);
+
+    this.currentValues.push(data.heapPercentageUsage);
+    if(this.currentValues.length > ServerStatsWidget.MAX_COLUMNS) {
+        this.currentValues.shift(); // remove left most column to make room for new value
+    }
+    this.updateGraph();
 };
 
-ServerStatsWidget.prototype.createCurrentInfo = function(data) {
+ServerStatsWidget.prototype.createTextInfo = function(data) {
     var info = "Uptime: " + data.uptime + "Current heap usage: " + data.heapUsage + " ("+ data.heapPercentageUsage + ")";
     return info;
 };
 
+ServerStatsWidget.prototype.createGraphContainer = function(resultId) {
+    var sel = "#feed-" + resultId;
+    var feedDiv = d3.select(sel);
+    this.graphContainer = feedDiv.append("svg")
+        .attr("id", resultId + "-graph")
+        .attr("width", ServerStatsWidget.GRAPH_WIDTH)
+        .attr("height", ServerStatsWidget.GRAPH_HEIGHT);
+};
+
+ServerStatsWidget.prototype.updateGraph = function() {
+    var width = ServerStatsWidget.COL_WIDTH + ServerStatsWidget.COL_SPACING;
+    var xFn = function(data, index) { return index * width };
+    var yFn = function(data) { return ServerStatsWidget.GRAPH_HEIGHT - data };
+    var heightFn = function(data) { return data };
+    var svg = this.graphContainer;
+
+    // add any new nodes (if less than max columns shown)
+    svg.selectAll("rect")
+        .data(this.currentValues)
+        .enter()
+        .append("rect")
+        .attr("x", xFn)
+        .attr("y", yFn)
+        .attr("width", 20)
+        .attr("height", heightFn);
+
+    // update any existing nodes
+    svg.selectAll("rect")
+        .data(this.currentValues)
+        .attr("x", xFn)
+        .attr("y", yFn)
+        .attr("width", 20)
+        .attr("height", heightFn);
+};
+
+ServerStatsWidget.MAX_COLUMNS = 25;
+ServerStatsWidget.GRAPH_WIDTH = 600; // will fit 25 columns
+ServerStatsWidget.GRAPH_HEIGHT = 150;
+ServerStatsWidget.COL_WIDTH = 20;
+ServerStatsWidget.COL_SPACING = 4;
+
+
 FeedResultManager.registerWidgetConstructor("SERVER_STATS_RESULT", ServerStatsWidget.constuctWidget);
+
+
+// ---------
+
+//0000

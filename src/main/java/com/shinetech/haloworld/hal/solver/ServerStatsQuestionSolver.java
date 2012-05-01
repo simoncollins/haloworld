@@ -64,7 +64,7 @@ public class ServerStatsQuestionSolver implements QuestionSolver {
         long maxMem = usage.getMax();
         long usedMem = usage.getUsed();
         String heapUsageAsString = Long.toString(usedMem);
-        float heapPercentageUsage = (float) 100 * (usedMem/maxMem);
+        float heapPercentageUsage = 100 * ((float) usedMem/maxMem);
 
         return new ServerStatsData(uptime.toString(), heapUsageAsString, heapPercentageUsage);
     }

@@ -11,12 +11,12 @@ TextResultWidget.constuctWidget = function(resultId) {
 
 TextResultWidget.prototype.createWithData = function(data) {
     console.log("Creating result with data: " + data);
-    $('#' + this.resultId).text(data.text);
+    $('#feed-' + this.resultId).text(data.text);
 };
 
 TextResultWidget.prototype.updateWithData = function(data) {
     console.log("Updating result with data: " + data)
-    $('#' + this.resultId).text(data.text);
+    $('#feed-' + this.resultId).text(data.text);
 };
 
 FeedResultManager.registerWidgetConstructor("SIMPLE_TEXT_RESULT", TextResultWidget.constuctWidget);

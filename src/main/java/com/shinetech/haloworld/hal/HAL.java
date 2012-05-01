@@ -24,6 +24,7 @@ public class HAL {
 
     private List<QuestionSolver> questionSolvers = new ArrayList<QuestionSolver>();
     private ExecutorService executorService;
+    private static final int THREADS = 10;
 
     public HAL() { }
 
@@ -37,7 +38,7 @@ public class HAL {
 
     public void initWithContext(ChatContext context) {
         this.context = context;
-        this.executorService = Executors.newSingleThreadExecutor();
+        this.executorService = Executors.newFixedThreadPool(THREADS);
     }
 
     public void handleMessage(Message message) {
@@ -51,9 +52,12 @@ public class HAL {
     }
 
     private void handleChatMessage(ChatMember chatMember, String messageText) {
+
         String text = messageText.trim().toLowerCase();
 
-        if(text != null && mentionedInMessage(text)) {
+        if(mentionedInMessage(text)) {
+            // remove the @mention and any question mark
+            text = text.replace(HANDLE, "").replace("?", "").trim();
 
             for(QuestionSolver questionSolver : questionSolvers) {
                 if(questionSolver.canProvideAnswer(text)) {
@@ -95,8 +99,13 @@ public class HAL {
         }
 
         @Override
-        public void couldNotAnswerQuestion(String resultId, String reason) {
+        public void couldNotAnswerQuestion(String reason) {
             context.sendMessage(new ChatMessage("Sorry, I could not answer your question"));
+        }
+
+        @Override
+        public void answeringQuestion() {
+            context.sendMessage(new ChatMessage("Looking up your answer, please wait ..."));
         }
 
         @Override

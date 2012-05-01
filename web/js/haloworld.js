@@ -87,12 +87,16 @@ function addChatMessage(message) {
 }
 
 function addFeedResult(message) {
-    // create the feed container that the widget will render the result into
-    var htmlContent = "<div id='" + message.resultId + "' class='result feed'></div>"
-    $('#feed').append(htmlContent);
+    addFeedContainer(message.resultId);
 
     // create the result within the container
     FeedResultManager.createResult(message.resultType, message.resultId, message.data);
+}
+
+function addFeedContainer(resultId) {
+    // create the feed container that the widget will render the result into
+    var htmlContent = "<div id='feed-" + resultId + "' class='result feed'></div>"
+    $('#feed').append(htmlContent);
 }
 
 function updateFeedResult(feedResultId, updateData) {
@@ -143,6 +147,7 @@ function connectToServer() {
 
     console.log("Connected to server");
 }
+
 
 var FeedResultManager = {
 

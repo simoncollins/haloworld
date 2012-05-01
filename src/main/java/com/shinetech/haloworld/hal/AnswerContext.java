@@ -16,7 +16,9 @@ public interface AnswerContext {
 
     public void publishUpdate(String resultId, Answer answer);
 
-    public void couldNotAnswerQuestion(String resultId, String reason);
+    public void couldNotAnswerQuestion(String reason);
+
+    public void answeringQuestion();
 
     public void log(String resultId, String message);
 
