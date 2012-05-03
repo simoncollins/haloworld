@@ -43,7 +43,7 @@ ServerStatsWidget.prototype.updateWithData = function(data) {
 };
 
 ServerStatsWidget.prototype.createTextInfo = function(data) {
-    var info = "Uptime: " + data.uptime + "Current heap usage: " + data.heapUsage + " ("+ data.heapPercentageUsage + ")";
+    var info = "UPTIME: " + data.uptime + " HEAP USAGE: " + data.heapUsage + " ("+ data.heapPercentageUsageString + "%)";
     return info;
 };
 
@@ -59,8 +59,8 @@ ServerStatsWidget.prototype.createGraphContainer = function(resultId) {
 ServerStatsWidget.prototype.updateGraph = function() {
     var width = ServerStatsWidget.COL_WIDTH + ServerStatsWidget.COL_SPACING;
     var xFn = function(data, index) { return index * width };
-    var yFn = function(data) { return ServerStatsWidget.GRAPH_HEIGHT - data };
-    var heightFn = function(data) { return data };
+    var yFn = function(data) { return ServerStatsWidget.GRAPH_HEIGHT - ((data / 100) * ServerStatsWidget.GRAPH_HEIGHT) };
+    var heightFn = function(data) { return (data / 100) * ServerStatsWidget.GRAPH_HEIGHT };
     var svg = this.graphContainer;
 
     // add any new nodes (if less than max columns shown)
@@ -70,7 +70,7 @@ ServerStatsWidget.prototype.updateGraph = function() {
         .append("rect")
         .attr("x", xFn)
         .attr("y", yFn)
-        .attr("width", 20)
+        .attr("width", ServerStatsWidget.COL_WIDTH)
         .attr("height", heightFn);
 
     // update any existing nodes
@@ -78,20 +78,16 @@ ServerStatsWidget.prototype.updateGraph = function() {
         .data(this.currentValues)
         .attr("x", xFn)
         .attr("y", yFn)
-        .attr("width", 20)
+        .attr("width", ServerStatsWidget.COL_WIDTH)
         .attr("height", heightFn);
 };
 
-ServerStatsWidget.MAX_COLUMNS = 25;
-ServerStatsWidget.GRAPH_WIDTH = 600; // will fit 25 columns
+ServerStatsWidget.MAX_COLUMNS = 20;
+ServerStatsWidget.GRAPH_WIDTH = 640; // will fit 25 columns
 ServerStatsWidget.GRAPH_HEIGHT = 150;
-ServerStatsWidget.COL_WIDTH = 20;
+ServerStatsWidget.COL_WIDTH = 30;
 ServerStatsWidget.COL_SPACING = 4;
 
 
 FeedResultManager.registerWidgetConstructor("SERVER_STATS_RESULT", ServerStatsWidget.constuctWidget);
 
-
-// ---------
-
-//0000

@@ -21,10 +21,34 @@ function setup() {
 
     $('#join-btn').click(handleLogin);
 
+    $("#login-name").focus();
+
+    $('#loginModal').on('shown', function () {
+        this.focus();
+    })
+
     $('#loginModal').modal({
         keyboard: false,
         backdrop: 'static'
     });
+
+    $("#login-name").keypress(function(e){
+        if (e.which == 13) {
+            handleLogin();
+            return false;
+        }
+        return true;
+    });
+
+    $("#message-box").keypress(function(e){
+        if (e.which == 13) {
+            sendMessage();
+            return false;
+        }
+        return true;
+    });
+
+
 
 }
 
@@ -34,6 +58,7 @@ function handleLogin() {
         $('#loginModal').modal('hide');
         connectToServer();
     }
+    $('#message-box').focus();
     return false;
 }
 
@@ -91,12 +116,14 @@ function addFeedResult(message) {
 
     // create the result within the container
     FeedResultManager.createResult(message.resultType, message.resultId, message.data);
+
+    $('#feed-' + message.resultId).effect("highlight", {}, 5000);
 }
 
 function addFeedContainer(resultId) {
     // create the feed container that the widget will render the result into
     var htmlContent = "<div id='feed-" + resultId + "' class='result feed'></div>"
-    $('#feed').append(htmlContent);
+    $('#feed').prepend(htmlContent);
 }
 
 function updateFeedResult(feedResultId, updateData) {

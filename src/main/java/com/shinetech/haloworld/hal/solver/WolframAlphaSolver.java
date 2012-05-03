@@ -23,6 +23,7 @@ import static com.shinetech.haloworld.hal.Answer.TYPE.SIMPLE_TEXT_RESULT;
  * Queries Wolfram Alpha to answer questions.
  */
 public class WolframAlphaSolver implements QuestionSolver {
+    private static final String API_KEY = "?";
 
     private final static Logger logger = LoggerFactory.getLogger(WolframAlphaSolver.class);
 
@@ -51,7 +52,7 @@ public class WolframAlphaSolver implements QuestionSolver {
             SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
             String encodedQuestion = URLEncoder.encode(question, "UTF-8");
 
-            URL url = new URL("http://api.wolframalpha.com/v2/query?input=" + encodedQuestion + "&appid=XX");
+            URL url = new URL("http://api.wolframalpha.com/v2/query?input=" + encodedQuestion + "&appid=" + API_KEY);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             int responseCode = conn.getResponseCode();
             System.out.println("Response code: " + responseCode);

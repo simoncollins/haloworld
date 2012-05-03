@@ -12,6 +12,8 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
 import java.lang.management.RuntimeMXBean;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 import static com.shinetech.haloworld.hal.Answer.TYPE.SERVER_STATS_RESULT;
 import static com.shinetech.haloworld.hal.Answer.TYPE.SIMPLE_TEXT_RESULT;
@@ -58,15 +60,47 @@ public class ServerStatsQuestionSolver implements QuestionSolver {
         RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
         MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
 
-        Long uptime = runtimeMXBean.getUptime();
+        long uptime = runtimeMXBean.getUptime();
 
         MemoryUsage usage = memoryMXBean.getHeapMemoryUsage();
         long maxMem = usage.getMax();
         long usedMem = usage.getUsed();
-        String heapUsageAsString = Long.toString(usedMem);
         float heapPercentageUsage = 100 * ((float) usedMem/maxMem);
+        DecimalFormat df = new DecimalFormat("#.##");
+        String heapPercentageUsageString = df.format(heapPercentageUsage);
 
-        return new ServerStatsData(uptime.toString(), heapUsageAsString, heapPercentageUsage);
+        return new ServerStatsData(formatUptime(uptime), formatHeapUsageInMB(usedMem), heapPercentageUsage, heapPercentageUsageString);
+    }
+
+    private String formatHeapUsageInMB(long usedMem) {
+        StringBuffer buf = new StringBuffer();
+        float mb = (float) usedMem / (1024 * 1024);
+        DecimalFormat df = new DecimalFormat("#.#");
+        buf.append(df.format(mb)).append(" MB");
+        return buf.toString();
+    }
+
+    private String formatUptime(long uptime) {
+        StringBuffer buf = new StringBuffer();
+        final long MILLISECONDS_IN_ONE_SECOND = 1000;
+        final long MILLISECONDS_IN_ONE_MINUTE = MILLISECONDS_IN_ONE_SECOND * 60;
+        final long MILLISECONDS_IN_ONE_HOUR = MILLISECONDS_IN_ONE_MINUTE * 60;
+
+        int hours = (int) (uptime / MILLISECONDS_IN_ONE_HOUR);
+        long remainder = uptime % MILLISECONDS_IN_ONE_HOUR;
+
+        if(hours > 0) buf.append(hours).append("hrs ");
+
+        int minutes = (int) (remainder / MILLISECONDS_IN_ONE_MINUTE);
+        remainder = remainder % MILLISECONDS_IN_ONE_MINUTE;
+
+        if(minutes > 0) buf.append(minutes).append(" min. ");
+
+        int seconds = (int) (remainder / MILLISECONDS_IN_ONE_SECOND);
+
+        if (seconds > 0) buf.append(seconds).append(" sec.");
+
+        return buf.toString();
     }
 
     private void scheduleUpdates(final String resultId, final AnswerContext context) {
